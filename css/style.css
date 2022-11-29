@@ -244,9 +244,6 @@ ul {
   height: 100%;
   background-color: var(--sub-focus);
   opacity: 1;
-  transition-property: background-color, transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .is-hidden {
   visibility: hidden;
@@ -254,7 +251,7 @@ ul {
   pointer-events: none;
 }
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.8);
+  transform: translate(-50%, -50%) scale(0.7);
 }
 .modal {
   position: absolute;
