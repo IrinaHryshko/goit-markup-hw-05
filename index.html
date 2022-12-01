@@ -61,7 +61,7 @@
 
       <!--Модалка-->
 
-      <div data-modal class="backdrop is-hidden"><div class="modal"><button data-modal-close class="modal-btn"><svg  height="11px" width="11px"><use href="./images/sprite.svg#icon-Vector"></use></svg></button></div></div>
+      <div data-modal class="backdrop is-hidden"><div class="modal"><button type="button" data-modal-close class="modal-btn"><svg  height="11px" width="11px"><use href="./images/sprite.svg#icon-Vector"></use></svg></button></div></div>
       
       <!--Другий блок-->
       
@@ -265,8 +265,15 @@
             <li class="social-list"><a href="#"  class="icon-footer"><svg class="icon-social" width="20px" height="20px"> <use href="./images/sprite.svg#icon-linkedin-1"></use></svg></a></li>
           </ul>
        </div>
+    <div class="footer-mailing-list">
+    <form class="footer-form">
+      <label for="mailing-list-area" class="mailing-list">Підпишіться на розсилку</label>
+      <input type="mail" placeholder="E-mail" name="mailing-list-area" class="mailing-list-area">
+    </form>
+      
+   <button type="button" class="footer-btn">Підписатися  <svg width="24px" height="24px" ><use href="./images/sprite.svg#icon-icon-send"></use> </svg></button>
     </div>
-    
+    </div>
       </footer>
   <script src="./js/modal.js"></script>
   </body>
