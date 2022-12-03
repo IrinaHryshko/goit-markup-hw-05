@@ -61,16 +61,36 @@
 
       <!--Модалка-->
 
-      <div data-modal class="backdrop is-hidden"><div class="modal"><button type="button" data-modal-close class="modal-btn">
+      <div data-modal class="backdrop is-hidden"><div class="modal"><button type="button" data-modal-close class="modal-close-btn">
       <svg  height="11px" width="11px"><use href="./images/sprite.svg#icon-Vector"></use></svg></button>
-<form >
-  <label class="">
-    <p>Залиште свої дані, ми вам передзвонимо</p>
-    Ім'я <input type="text">
+<form class="modal-form">
+  <p>Залиште свої дані, ми вам передзвонимо</p>
+  <label class="label-input">
+    Ім'я
+     <div class="position-img"><input type="text" class="modal-style" autofocus > <svg width="18px" height="18px" class="modal-icon "> <use href="./images/sprite.svg#icon-person-black-18dp-1-1-1"></use></svg></div>
   </label>
+   <label class="label-input">
+    
+    Телефон 
+    <div class="position-img">
+    <input type="tel" class=" modal-style"> <svg width="18px" height="18px" class="modal-icon "> <use href="./images/sprite.svg#icon-phone-black-18dp-1-1-1"></use></svg></div>
+  </label>
+   <label class="label-input">
+    Пошта 
+    <div class="position-img"> <input type="text" class=" modal-style"> 
+   <svg width="18px" height="18px" class="modal-icon "> <use href="./images/sprite.svg#icon-email-black-18dp-1-1-1"></use></svg></div>
+  </label>
+   <label class="label-input">
+    
+    Коментар <textarea type="" class="comment-input " placeholder="Введіть текст"></textarea> 
+  </label>
+  <label class="label-checkbox"><input type="checkbox" class="modal-checkbox "><span class="checkbox-new"></span> 
+   <span>Погоджуюся з розсилкою та приймаю <a href="#" class="contract">Умови договору</a></span> </label>
+  <button type="submit" class="send-btn">Відправити</button>
 </form>
 
-      </div></div>
+      </div>
+    </div>
       
       <!--Другий блок-->
       
@@ -277,10 +297,10 @@
     
     <form class="footer-form" >
       <div>
-      <label for="mail" class="mailing-list">Підпишіться на розсилку</label>
-      <input type="mail" placeholder="E-mail" name="mail" class="mailing-list-area">
+      <label for="subscription" class="mailing-list">Підпишіться на розсилку</label>
+      <input type="mail" placeholder="E-mail" name="subscription" class="mailing-list-area">
       </div>
-      <button type="button" class="footer-btn">Підписатися  <svg width="24px" height="24px"><use href="./images/sprite.svg#icon-icon-send"></use> </svg></button>
+      <button type="submit" class="footer-btn">Підписатися  <svg width="24px" height="24px"><use href="./images/sprite.svg#icon-icon-send"></use> </svg></button>
     </form>
     </div>
       </footer>

@@ -35,9 +35,7 @@ body {
   line-height: 1.2;
   background-color: var(--accent-color);
 }
-a {
-  text-decoration: none;
-}
+
 ul {
   list-style: none;
   padding: 0;
@@ -67,6 +65,7 @@ ul {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  text-decoration: none;
 
   color: var(--brand-color);
   transition-property: color;
@@ -93,6 +92,7 @@ ul {
   font-weight: 700;
   line-height: 1.19;
   color: var(--logo);
+  text-decoration: none;
 }
 .base-logo {
   color: var(--sub-accent);
@@ -150,6 +150,8 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  text-decoration: none;
 
   padding-top: 32px;
   padding-bottom: 32px;
@@ -235,6 +237,7 @@ ul {
 .btn:focus {
   background-color: var(--hover-accent);
 }
+
 .backdrop {
   position: fixed;
   z-index: 1;
@@ -269,8 +272,146 @@ ul {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal-form {
+  margin: 40px;
+}
+.modal-form p {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.label-input {
+  display: block;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  margin-top: 12px;
+  color: var(--text-color);
+}
 
-.modal-btn {
+.modal-style {
+  display: block;
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin: 4px 0 0 0;
+  padding: 0;
+  min-width: 448px;
+  min-height: 40px;
+  padding-left: 42px;
+  transition-property: border, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.position-img {
+  position: relative;
+  color: var(--brand-color);
+}
+.modal-icon {
+  position: absolute;
+  top: 11px;
+  left: 12px;
+  fill: var(--brand-color);
+}
+.modal-style:focus {
+  cursor: pointer;
+  border: 1px solid #2196f3;
+  padding-left: 42px;
+}
+.modal-style:focus-within + .modal-icon {
+  fill: var(--sub-accent);
+}
+
+.comment-input {
+  display: block;
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin: 4px 0 0 0;
+  padding: 12px 16px;
+
+  resize: none;
+  min-width: 448px;
+  min-height: 120px;
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+textarea.comment-input::placeholder {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  line-height: 1.16;
+  color: rgba(117, 117, 117, 0.5);
+}
+.comment-input:focus {
+  padding: 12px 16px;
+
+  cursor: pointer;
+  border: 1px solid var(--sub-accent);
+
+  font-weight: 400;
+  font-size: 12px;
+}
+.modal-checkbox {
+  margin-top: 20px;
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.contract {
+  color: var(--sub-accent);
+}
+.modal-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+
+  overflow: hidden;
+}
+.modal-checkbox:checked + .checkbox-new {
+  background-color: var(--sub-accent);
+  background-image: url(../images/iconcheck.svg);
+  background-origin: padding-box;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px var(--sub-accent);
+  border-radius: 2px;
+}
+.label-checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  text-align: center;
+  color: var(--text-color);
+}
+.checkbox-new {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--brand-color);
+
+  margin-right: 8px;
+  padding-top: 3px;
+  border-radius: 2px;
+}
+
+.modal-close-btn {
   position: absolute;
 
   border: 1px solid var(--modal-btn);
@@ -284,6 +425,39 @@ ul {
   cursor: pointer;
   width: 30px;
   height: 30px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  fill: var(--sub-accent);
+}
+.send-btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+
+  width: 200px;
+  height: 50px;
+  color: var(--accent-color);
+  background: var(--sub-accent);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-style: normal;
+  letter-spacing: 0.06em;
+  line-height: 1.87;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.send-btn:hover,
+.send-btn:focus {
+  background-color: var(--hover-accent);
 }
 .personalities-list {
   width: 270px;
@@ -427,6 +601,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -464,6 +639,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
   padding: 0;
   margin: 0;
   width: 170px;
@@ -499,6 +675,7 @@ ul {
 .logo-footer {
   display: inline-block;
   margin-bottom: 20px;
+  text-decoration: none;
 
   color: var(--accent-color);
   font-family: "Raleway", sans-serif;
@@ -508,6 +685,7 @@ ul {
 }
 .mail {
   display: inline-block;
+  text-decoration: none;
 
   font-style: normal;
   line-height: 1.7;
@@ -568,6 +746,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
 
   width: 44px;
   height: 44px;
@@ -609,13 +788,16 @@ ul {
 
 .mailing-list-area {
   display: block;
+  outline: none;
+  padding: 15px 16px;
+  width: 358px;
+  height: 50px;
+  margin-top: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: var(--bgc);
-  width: 358px;
-  height: 50px;
-  margin-top: 20px;
+
   color: var(--accent-color);
 }
 .mailing-list-area::placeholder {
@@ -623,10 +805,13 @@ ul {
   line-height: 1.25;
 
   font-size: 16px;
-  align-items: start;
-  padding-left: 16px;
+  position: absolute;
+  left: 16px;
+  top: 15px;
 }
-
+.mailing-list-area:focus {
+  padding: 15px 16px;
+}
 .footer-btn {
   display: flex;
   justify-content: center;
@@ -645,6 +830,15 @@ ul {
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+
+  cursor: pointer;
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-btn:hover,
+.footer-btn:focus {
+  background-color: var(--hover-accent);
 }
 .footer-btn svg {
   margin-left: 10px;
@@ -734,6 +928,7 @@ ul {
 
 .examples-link {
   display: block;
+  text-decoration: none;
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
